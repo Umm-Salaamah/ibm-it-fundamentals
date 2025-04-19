@@ -16,7 +16,7 @@ We begin by asking a standard question:
 Jovi responds with:  
 > "When I restart the router, some devices connect to the internet and some don’t. It’s not always the same devices that connect."
 
-![Step 1](https://drive.google.com/file/d/1HptkJTHnBzFnBJwUdfG7cJBsnHwcav17/view?usp=drive_link)
+![Step 1](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9c1f95f29d35c233413e4653615828f7f8d715/Screenshot%202025-04-17%20193541.png)
 ![Step 2](https://drive.google.com/file/d/1CtsdILToxb6GDmdlKhu_6yH1amldqcAa/view?usp=drive_link)
 
 ---
