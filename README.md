@@ -1,5 +1,3 @@
-# ibm-it-fundamentals
-Simulation project for IBM IT Fundamentals: Network Troubleshooting
 
 # IBM IT Fundamentals: Network Troubleshooting Simulation
 
@@ -16,7 +14,7 @@ We begin by asking a standard question:
 Jovi responds with:  
 > "When I restart the router, some devices connect to the internet and some don’t. It’s not always the same devices that connect."
 
-
+![Step 1](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20193541.png)
 ![Step 2](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20193555.png)
 
 ---
@@ -24,32 +22,32 @@ Jovi responds with:
 ### Step 2: Narrowing Down the Issue
 We then ask if the same number of devices connect each time, helping to isolate the DHCP assignment issue.
 
-![Step 3](https://drive.google.com/file/d/1Yk056BYuK5vTNQxTFGXEIo6a0HLeB5re/view?usp=drive_link)
-![Step 4](https://drive.google.com/file/d/1CIRupgrCOeDN2YQiNA_ff8Dl9HQ9Y3U0/view?usp=drive_link)
+![Step 3](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20193724.png)
+![Step 4](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20193753.png)
 
 ---
 
 ### Step 3: Identify Peripheral Device Issues
 We explore whether the issue involves internet-enabled printers and the frustration the user faces.
 
-![Step 5](https://drive.google.com/file/d/1S_98CZnU6lxwW0eggsIj5__1GGsvvxlI/view?usp=drive_link)
-![Step 6](https://drive.google.com/file/d/1Xldf92hw0ajB1mstQ9ANU5ZcERZ6jLDE/view?usp=drive_link)
+![Step 5](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20193916.png)
+![Step 6](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-17%20194047.png)
 
 ---
 
 ### Step 4: Investigating IP Assignment
 We ask Jovi if they assigned static IPs, helping us rule out potential conflicts. We confirm DHCP is being used.
 
-![Step 7](https://drive.google.com/file/d/1L6VMGaFsupNMgNjSkKTTOgj9tQ9e1vDv/view?usp=drive_link)
+![Step 7](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20194840.png)
 
 ---
 
 ### Step 5: Remote Access for Troubleshooting
 We remotely access the user’s device using **Google Chrome Remote Desktop** and review the router settings via SSH.
 
-![Remote Access](https://drive.google.com/file/d/16koyid5E7Av8bJ4P1M3pC8LNQQVX9wui/view?usp=drive_link)
-![Router Interface](https://drive.google.com/file/d/1jpAOg-PDDA0IqX3XlgF36Km3vAK66q5B/view?usp=drive_link)
-![IBM Confirmation Page](https://drive.google.com/file/d/15QNDcgLAU9eSsoB37TS1B9IoWvAr5CEe/view?usp=drive_link)
+![Remote Access](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20195050.png)
+![Router Interface](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20195111.png)
+![IBM Confirmation Page](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20195125.png
 
 ---
 
@@ -80,15 +78,15 @@ We identify that the router’s **IP address pool** was too small. The default r
 After narrowing down the cause to DHCP limits, we accessed the router using **SSH** for deeper inspection.
 
 ### Step 6: Launch Command Prompt
-![Start CMD](https://drive.google.com/file/d/122gMdioPfp-Gv47VsS0pHSep2gHBHQer/view?usp=drive_link)
-![Run Command](https://drive.google.com/file/d/10PctkUwg8dR9-ThxKOEO2DApLErU1inB/view?usp=drive_link)
+![Start CMD](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20200424.png)
+![Run Command](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20200504.png)
 
 ### Step 7: Connect to the Router via SSH
 We ran the following command to initiate a secure shell session:
 ```bash
 ssh admin@192.168.1.1
 ```
-![SSH Initiation](https://drive.google.com/file/d/1azSw-0jF2dyWlqq6cH88OAqBwDupuy02/view?usp=drive_link)
+![SSH Initiation](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20200610.png)
 
 ### Step 8: Retrieve DHCP Configuration
 Once connected, we used:
@@ -98,8 +96,8 @@ nvram get dhcp_end
 ```
 To fetch the current IP address allocation range.
 
-![Check Start IP](https://drive.google.com/file/d/1qrDxDk5TWKTVdhSRT0Kd8ZXgHMRLh62H/view?usp=drive_link)
-![Check End IP](https://drive.google.com/file/d/1K2d0sD0s2uRhItna8MLlFE08ASUWrdJs/view?usp=drive_link)
+![Check Start IP](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20200800.png)
+![Check End IP](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20201616.png)
 
 ---
 
@@ -114,7 +112,7 @@ End: `192.168.1.10`
 **After:**  
 End expanded to `192.168.1.100`
 
-![DHCP Adjustment](https://drive.google.com/file/d/1yYi1zeEsIp2PDUH646XWDWJT-J4DERow/view?usp=drive_link)
+![DHCP Adjustment](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20201656.png)
 
 ---
 
@@ -122,9 +120,9 @@ End expanded to `192.168.1.100`
 
 We verified that all devices could now connect to the network and followed up with the user to confirm resolution.
 
-![Confirmation Message](https://drive.google.com/file/d/1b_Jdc_r6DjkO3ugmIIY1kyEcVKbWrpJh/view?usp=drive_link)
-![Final Chat Message](https://drive.google.com/file/d/102jV922Q3AhKW7XOlcXuYON59WXJckAn/view?usp=drive_link)
-![Closure](https://drive.google.com/file/d/1cN3_EKBT10oAwxoqxuQDQ36khn5RwFJu/view?usp=drive_link)
+![Confirmation Message](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20201809.png)
+![Final Chat Message](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20210417.png)
+![Closure](https://github.com/Umm-Salaamah/ibm-it-fundamentals/blob/8f9262e7d3cdd321ff44b70b6a64d70eb7878860/Screenshot%202025-04-18%20210442.png)
 
 ---
 
